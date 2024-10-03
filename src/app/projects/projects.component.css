@@ -1,0 +1,141 @@
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2rem;
+  color: #0073e6;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* .projects-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #0073e6;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 2px;
+} */
+
+/* Grid layout for projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Project card styling */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Info section that displays project title */
+.project-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover content styling */
+.hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show hover content when hovering over the card */
+.project-card:hover .hover-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tags styling */
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #0073e6;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* GitHub link */
+.github-link {
+  margin-top: 15px;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #0073e6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+}
+
+
+.project-info h3 {
+  font-size: 1.4rem; 
+  margin: 0; 
+  /* font-weight: bold;  */
+}
+
+.hover-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0; 
+  /* font-weight: bold; */
+}
